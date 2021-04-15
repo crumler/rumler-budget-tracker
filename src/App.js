@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "nes.css/css/nes.min.css";
+import Expenses from './components/Expenses/Expenses';
 
-function App() {
+const App = () => {
+  const expenses = [
+    {
+      id: 1,
+      title: "Netflix",
+      amount: 11.99,
+      date: new Date(2021, 3, 13)
+    },
+    {
+      id: 1,
+      title: "Netflix",
+      amount: 11.99,
+      date: new Date(2021, 3, 13)
+    },
+    {
+      id: 2,
+      title: "Xbox Game Pass",
+      amount: 9.99,
+      date: new Date(2021, 3, 17)
+    },
+    {
+      id: 3,
+      title: "Car Loan",
+      amount: 447.34,
+      date: new Date(2021, 3, 2)
+    }
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="container__expense-list">
+        <Expenses expenses={expenses} />
+      </div>
     </div>
   );
 }
