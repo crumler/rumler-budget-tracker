@@ -30,6 +30,7 @@ const App = () => {
   ]
   return (
     <div className="container">
+      <h1>My 8-bit Expenses Tracker</h1>
       <div className="container__expense-list">
         <Expenses expenses={expenses} />
       </div>
